@@ -1,20 +1,5 @@
-import { useState } from "react"
+import List from "./components/List";
 
-function App() {
-  const [list, setList] = useState(['Diego', 'Rodz', 'Mayk'])
-
-  function addToDoList() {
-    setList(state => [...state, 'Novo'])
-  }
-
-  return (
-    <>
-      <button onClick={addToDoList}>Adcionar</button>
-      <ul>
-        {list.map(item => <li key={item}>{item}</li>)}
-      </ul>
-    </>
-  )
+export default function App() {
+  return <List initialItems={['Diego', 'Rodz', 'Mayk']} />
 }
-
-export default App
